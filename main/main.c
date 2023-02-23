@@ -114,7 +114,7 @@ static void render_audio() {
     }
 }
 
-#include "commando.inc"
+#include "phantom.inc"
 
 void app_main() {
     ESP_LOGI(TAG, "Welcome CSID app!");
@@ -128,7 +128,7 @@ void app_main() {
     audio_init(22050);
     
     libcsid_init(22050, SIDMODEL_6581);
-    libcsid_load((unsigned char *)&music_Commando_sid, music_Commando_sid_len, 0);
+    libcsid_load((unsigned char *)&phantom_of_the_opera_sid, phantom_of_the_opera_sid_len, 0);
 
     printf("SID Title: %s\n", libcsid_gettitle());
     printf("SID Author: %s\n", libcsid_getauthor());
